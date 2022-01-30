@@ -1,0 +1,6 @@
+Project 5 Video link:
+https://loom.com/share/7b795e6ab311497386f2e2fae10367a0
+
+Time Complexity:
+
+The time complexity of the recurrence algorithm in Slip Slap Slop would be: O(N logN).

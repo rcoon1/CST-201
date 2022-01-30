@@ -1,0 +1,73 @@
+package Proj1Redo;
+
+public class MyStringDriver {
+
+	public static void main(String[] args) {
+		MyString firstString = new MyString("'Jack Johnson'");
+		// creating a MyString object
+		MyString secondString = new MyString("'Bilbo Baggins'");
+		// creating a MyString object
+		MyString thirdString = firstString;
+
+		// .length() method
+		System.out.println("The length of my first input string is: " + firstString.length() + secondString.length());
+
+		// toString method
+		System.out.println("s1 - " + firstString);
+		System.out.println("s2 - " + secondString);
+
+		// concat() method
+		System.out.println("My Concat string is: " + firstString.concatString(secondString));
+
+		// equals() method
+
+		System.out.println("Do my two strings equal each other? " + secondString.equals(thirdString));
+
+		// compareto() method
+		int comparedValue = firstString.compareTo(secondString);
+		if (comparedValue == 0) {
+			System.out.println(
+					firstString + " & " + secondString + " are the same, compareTo returned a " + comparedValue);
+		} else if (comparedValue == -1) {
+			System.out.println(firstString + " is lower in the alphabet than " + secondString
+					+ ", compareTo returned a " + comparedValue);
+		} else {
+			System.out.println(firstString + " is higher in the alphabet than " + secondString
+					+ ", compareTo returned a " + comparedValue);
+		}
+
+		// getChar() method
+		System.out.println("The character at index of 3 for s1 is " + firstString.getChar(3));
+
+		// toUpper() method
+		System.out.println("To upper case is " + firstString.toUpper());
+
+		// toLower() method
+		System.out.println("To lower case is " + secondString.toLower());
+
+		// subString() starting index only
+		System.out
+				.println("With the starting index of 2 on s2 is the remaining string is " + secondString.subString(2));
+
+		// subString() start and end index
+		System.out.println("With the starting index of 4 and an end index of 8 for s1, what's left over is: "
+				+ firstString.subString(3, 5));
+
+		// indexOf() method
+		int indexOfChar = thirdString.indexOf('n');
+		if (indexOfChar == -1) {
+			System.out.println("Char of 'n' not found in " + firstString);
+		} else {
+			System.out.println("Char of 'n' found at index of: " + indexOfChar + " in " + secondString);
+		}
+
+		// lastIndexOf() method
+		int lastIndexOfChar = firstString.lastIndexOf('n');
+		if (lastIndexOfChar == 1) {
+			System.out.println("Char of 'n' not found in " + secondString);
+		} else {
+			System.out.println("The last char of 'n' found at index of: " + lastIndexOfChar + " in " + secondString);
+		}
+	}
+
+}

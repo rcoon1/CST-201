@@ -1,0 +1,5 @@
+Time complexity: For n entries in the list, the time complexity will be O(n) , ignoring whatever hash function you're using. 
+Note that this is worst case (the last item), and on average the search runs in O(1).
+
+Video Link:
+https://www.loom.com/share/0c3daa605ab34856bc4b630e6b46f138

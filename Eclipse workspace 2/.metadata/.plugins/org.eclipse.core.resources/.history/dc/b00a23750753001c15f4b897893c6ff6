@@ -1,0 +1,44 @@
+package MazeSolver;
+
+import java.util.LinkedList;
+
+
+
+
+
+
+public class MyStack<T> {
+
+	LinkedList<T> data;
+	public Node<T> head;
+	public Node<T> tail;
+	public int listSize;
+
+	public void LinkedList(Node<T> head, Node<T> tail) {
+		this.head = head;
+		this.tail = tail;
+		tail.previous = head;
+	}
+	public LinkedList(LinkedList<T> singlyLinkedList) {
+		head = singlyLinkedList.head;
+		tail = singlyLinkedList.tail;
+	}
+
+
+
+	MyStack() {
+
+	}
+
+	public void pop_back() {
+		this.tail = this.tail.previous;
+		listSize--;
+	}
+
+	public boolean isEmpty() {
+		if (head == null) {
+			return true;
+		}
+		return false;
+	}
+}

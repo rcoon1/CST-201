@@ -1,0 +1,9 @@
+Group  Project 2: CLC Stacks & Queues
+Ryan Coon
+Allen Atkins
+Carrie Assalone
+
+This is an original submission of our Project 2 as a group on CLC Stacks & Queues. We worked together, and attest that this is all our own work.
+
+Video Link:
+https://www.loom.com/share/075908dce0d548e1b78a11cafb8f779f

@@ -1,0 +1,81 @@
+package MazeSolver;
+
+public class MyStack {
+
+	public class Node<T> {
+		public T data = new T();
+
+		public Node(T newData) {
+			data = newData;
+			next = null;
+		}
+
+		public Node next;
+	}
+
+	/*
+	 * creates the basic functions of a stack
+	 */
+	public class Stack<T> {
+		private Node<T> head;
+		private Node<T> tail;
+
+		private int length;
+
+		public Stack() {
+			this.head = null;
+			this.tail = null;
+			this.length = 0;
+		}
+
+		/*
+		 * Stack insert pushes values into the top of the stack adds one to length
+		 */
+		public void insert(T val) {
+			Node<T> n_node = new Node<T>(val);
+
+			n_node.next = head;
+			head = n_node;
+			Node<T> temp = head;
+
+			while (temp.next != null) {
+				temp = temp.next;
+			}
+			tail = temp;
+
+			length++;
+		}
+
+		/*
+		 * Stack pop removes the top of the stack removes one from the length
+		 */
+		public void pop() {
+			if (empty()) {
+				return;
+			}
+
+			Node<T> temp = head;
+			head = temp.next == null ? null : temp.next;
+
+			if (tail == temp) {
+				tail = head;
+			}
+			;
+			temp = null;
+
+			length--;
+		}
+
+		public boolean empty() {
+			return length == 0;
+		}
+
+		public int size() {
+			return length;
+		}
+
+		public T top() {
+			return head.data;
+		}
+	}
+}

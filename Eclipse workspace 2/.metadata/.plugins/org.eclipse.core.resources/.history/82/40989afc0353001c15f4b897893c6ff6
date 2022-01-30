@@ -1,0 +1,4 @@
+module MazeSolver {
+	requires java.base;
+	requires java.xml;
+}
